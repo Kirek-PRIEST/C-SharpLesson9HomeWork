@@ -16,9 +16,9 @@ int SumOfNaturalNumbers(int min, int max) //Вычисление суммы в �
     return SumOfNaturalNumbers(min + 1, max) + min;
 
 }
-int M = ReadIn("Введите первое число");
-int N = ReadIn("Введите второе число");
-if (M < 1 || N < 1) { Console.WriteLine("Оба числа долны быть натуральными."); } // Проверка числа на натуральность
-else if (M > N) { Console.WriteLine($"Сумма чисел в диапазоне от {N} до {M} равна {SumOfNaturalNumbers(N, M)}");} //Если второе число больше первого
-else { Console.WriteLine($"Сумма чисел в диапазоне от {M} до {N} равна {SumOfNaturalNumbers(M, N)}");} //Если первое больше ворого
+int firstNumber = ReadIn("Введите первое число");
+int secondNumber = ReadIn("Введите второе число");
+if (firstNumber < 1 || secondNumber < 1) { Console.WriteLine("Оба числа долны быть натуральными."); } // Проверка числа на натуральность
+else if (secondNumber > firstNumber) { Console.WriteLine($"Сумма чисел в диапазоне от {secondNumber} до {firstNumber} равна {SumOfNaturalNumbers(secondNumber, firstNumber)}");} //Если второе число больше первого
+else { Console.WriteLine($"Сумма чисел в диапазоне от {firstNumber} до {secondNumber} равна {SumOfNaturalNumbers(firstNumber, secondNumber)}");} //Если первое больше ворого
 
